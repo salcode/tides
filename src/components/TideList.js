@@ -48,7 +48,10 @@ class TideList extends React.Component {
            *   ],
            * }
            */
-          console.log({result});
+          this.setState({
+            isLoaded: true,
+            predictions: result.predictions,
+          });
         }
       );
   }
