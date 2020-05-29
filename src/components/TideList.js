@@ -64,6 +64,10 @@ class TideList extends React.Component {
   }
 
   render() {
+    const { error, isLoaded, predictions } = this.state;
+    if (error) {
+      return <div>Error: {error.message}</div>;
+    }
     console.log(
       'render()',
       {
