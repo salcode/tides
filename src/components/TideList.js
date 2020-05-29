@@ -4,6 +4,17 @@ const getUrl = (beginDate, endDate, station) => {
     return `https://tidesandcurrents.noaa.gov/api/datagetter?product=predictions&application=NOS.COOPS.TAC.WL&begin_date=${beginDate}&end_date=${endDate}&datum=MLLW&station=${station}&time_zone=lst_ldt&units=english&interval=hilo&format=json`;
 }
 
+const getTideTypeLabel = (type) => {
+  console.log(type);
+  switch (type) {
+    case 'H':
+      return 'High';
+    case 'L':
+      return 'Low';
+  }
+  return 'undefined';
+}
+
 class TideList extends React.Component {
 
   constructor(props) {
@@ -91,7 +102,7 @@ class TideList extends React.Component {
       <ul>
         {predictions.map(prediction => (
           <li key={prediction.t}>
-            {prediction.type} {prediction.t} ({prediction.v} ft)
+            {getTideTypeLabel(prediction.type)} Tide at {prediction.t} ({prediction.v} ft)
           </li>
         ))}
       </ul>
