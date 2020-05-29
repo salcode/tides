@@ -1,3 +1,9 @@
+# Tide List
+
+A React App that uses the NOAA.gov website to load tide information.
+
+## Bootstraped with Create React App
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
