@@ -13,6 +13,10 @@ function App() {
     (date.getMonth()+1).toString() +
     date.getDate().toString();
 
+  const getStation = () => {
+    return "8536110";
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -20,7 +24,7 @@ function App() {
         <TideList
           beginDate={dateToYMD(today)}
           endDate={dateToYMD(tomorrow)}
-          station="8536110"
+          station={getStation()}
         />
       </header>
     </div>
