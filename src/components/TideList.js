@@ -78,9 +78,13 @@ class TideList extends React.Component {
     });
 
     return (
-      <h2>
-        hello fromTideList
-      </h2>
+      <ul>
+        {predictions.map(prediction => (
+          <li key={prediction.t}>
+            {prediction.type} {prediction.t} ({prediction.v} ft)
+          </li>
+        ))}
+      </ul>
     );
   }
 }
