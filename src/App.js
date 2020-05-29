@@ -16,7 +16,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Tide List</h1>
+        <h1>Cape May NJ, Tide List</h1>
         <TideList
           beginDate={dateToYMD(today)}
           endDate={dateToYMD(tomorrow)}
