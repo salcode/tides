@@ -1,5 +1,9 @@
 import React from 'react';
 
+const getUrl = () => {
+    return "https://tidesandcurrents.noaa.gov/api/datagetter?product=predictions&application=NOS.COOPS.TAC.WL&begin_date=20200529&end_date=20200530&datum=MLLW&station=8536110&time_zone=lst_ldt&units=english&interval=hilo&format=json";
+}
+
 class TideList extends React.Component {
 
   constructor(props) {
@@ -27,7 +31,7 @@ class TideList extends React.Component {
         state: this.state,
     });
 
-    fetch("https://tidesandcurrents.noaa.gov/api/datagetter?product=predictions&application=NOS.COOPS.TAC.WL&begin_date=20200529&end_date=20200530&datum=MLLW&station=8536110&time_zone=lst_ldt&units=english&interval=hilo&format=json")
+    fetch(getUrl())
       .then(result => result.json())
       .then(
         (result) => {
