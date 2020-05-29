@@ -4,7 +4,11 @@ class TideList extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      error: null,
+      isLoaded: false,
+      predictions: [],
+    };
 
     console.log(
       'constructor',
